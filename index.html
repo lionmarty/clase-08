@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuadrícula Adaptativa</title>
+    <title>Aves chilenas sin disformismo y migratorias</title>
     <style>
         * {
             margin: 0;
@@ -117,6 +117,7 @@
                     if(a.info.dimorfism.value == "No"){
                         
                        if(a.info.migration.value == "Si"){
+                           
                     grid.innerHTML += `<div class="grid-item"><img src="${a.image.url.replace("http://www.buscaves.cl/","https://buscaves.cl/")}"/><p>${a.names.spanish}</p><small>${a.names.spanish}</small></div>`
                     }
 

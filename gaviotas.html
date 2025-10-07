@@ -113,8 +113,8 @@
                 let data = await consulta.json();
                 console.log(data);
 
-               data.forEach((a) => {
-    const latin = a.names.latin.toLowerCase(); // convierte a minúsculas
+              data.forEach((a) => {
+    const latin = a.names.latin.toLowerCase();
     if (
         latin.includes("larus") ||
         latin.includes("chroicocephalus") ||
@@ -129,9 +129,11 @@
         `;
     }
 });
-            datos("https://raw.githubusercontent.com/NinjasCL/chileanbirds-dataset/refs/heads/master/data/birds.json").catch((error) => console.error(error));
 
-        
+}
+datos("https://raw.githubusercontent.com/NinjasCL/chileanbirds-dataset/refs/heads/master/data/birds.json")
+  .catch((error) => console.error(error));
+
 
     </script>
 </body>

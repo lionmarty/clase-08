@@ -113,14 +113,13 @@
                 let data = await consulta.json();
                 console.log(data);
 
-                data.forEach((a)=>{
-// Filtra solo las gaviotas (por nombre científico)
+               data.forEach((a) => {
+    const latin = a.names.latin.toLowerCase(); // convierte a minúsculas
     if (
-        a.names.latin.includes("Larus") ||
-        a.names.latin.includes("Chroicocephalus") ||
-        a.names.latin.includes("Leucophaeus")
+        latin.includes("larus") ||
+        latin.includes("chroicocephalus") ||
+        latin.includes("leucophaeus")
     ) {
-        // Crea el elemento en la cuadrícula con imagen y nombre
         grid.innerHTML += `
             <div class="grid-item">
                 <img src="${a.image.url.replace("http://www.buscaves.cl/", "https://buscaves.cl/")}" />
